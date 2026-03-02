@@ -1630,7 +1630,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Response Body Example:",
-          "content": "{\n    \"payload\": {\n        \"id\": 226,\n        \"invoiceNumber\": \"INVF-05932\",\n        \"invoiceDate\": 1591192800,\n        \"invoiceDateFormatted\": \"04th Jun 2020\",\n        \"expectedPayDate\": 1591192800,\n        \"expectedPayDateFormatted\": \"04th Jun 2020\",\n        \"clientID\": 103,\n        \"companyName\": \"My Contact\",\n        \"primaryAddress\": \"1234 Abc Street\",\n        \"primaryContactName\": \"Jeff\",\n        \"primaryContactPhone\": \"0410 000 000\",\n        \"primaryContactEmail\": \"test@email.com\",\n        \"client\": {\n            \"id\": 103,\n            \"billingName\": \"My Contact\"\n        },\n        \"contact\": {\n            \"name\": \"Invoice Contact\",\n            \"email\": \"other@test.com\",\n            \"mobile\": \"0420 000 000\"\n        },\n        \"orderNumber\": \"\",\n        \"reference\": \"\",\n        \"addressTo\": \"\",\n        \"currency\": \"AUD\",\n        \"status\": \"Open\",\n        \"type\": \"ACCREC\",\n        \"lineItems\": [\n            {\n                \"id\": \"274\",\n                \"code\": \"\",\n                \"description\": \"3333\",\n                \"quantity\": \"1\",\n                \"unitAmount\": \"44\",\n                \"discountPercentage\": \"0\",\n                \"lineSubtotal\": 40,\n                \"taxAmount\": 4,\n                \"lineTotal\": 44\n            }\n        ],\n        \"taxType\": \"INCLUSIVE\",\n        \"tax\": 4,\n        \"subtotal\": 40,\n        \"total\": 44,\n        \"amountPaid\": 0,\n        \"payments\": [],\n        \"attachedTo\": {\n            \"job\": [\n                20000,\n                30000,\n                31353\n            ],\n            \"quote\": [\n                \"QU-001\",\n                \"QU-002\"\n            ]\n        },\n        \"history\": [\n            {\n                \"by\": \"User\",\n                \"userName\": \"Sam John\",\n                \"note\": \"Added 1 row.\",\n                \"date\": \"11th Aug 2022 11:26am\",\n                \"dateTimestamp\": \"1660181216\"\n            }\n        ]\n    }\n}",
+          "content": "{\n    \"payload\": {\n        \"id\": 226,\n        \"invoiceNumber\": \"INVF-05932\",\n        \"invoiceDate\": 1591192800,\n        \"invoiceDateFormatted\": \"04th Jun 2020\",\n        \"expectedPayDate\": 1591192800,\n        \"expectedPayDateFormatted\": \"04th Jun 2020\",\n        \"clientID\": 103,\n        \"companyName\": \"My Contact\",\n        \"primaryAddress\": \"1234 Abc Street\",\n        \"primaryContactName\": \"Jeff\",\n        \"primaryContactPhone\": \"0410 000 000\",\n        \"primaryContactEmail\": \"test@email.com\",\n        \"client\": {\n            \"id\": 103,\n            \"billingName\": \"My Contact\"\n        },\n        \"contact\": {\n            \"name\": \"Invoice Contact\",\n            \"email\": \"other@test.com\",\n            \"mobile\": \"0420 000 000\"\n        },\n        \"orderNumber\": \"\",\n        \"reference\": \"\",\n        \"addressTo\": \"\",\n        \"currency\": \"AUD\",\n        \"status\": \"Open\",\n        \"type\": \"ACCREC\",\n        \"lineItems\": [\n            {\n                \"id\": \"274\",\n                \"code\": \"\",\n                \"description\": \"3333\",\n                \"quantity\": \"1\",\n                \"unitAmount\": \"44\",\n                \"discountPercentage\": \"0\",\n                \"lineSubtotal\": 40,\n                \"taxAmount\": 4,\n                \"lineTotal\": 44\n            }\n        ],\n        \"taxType\": \"INCLUSIVE\",\n        \"tax\": 4,\n        \"subtotal\": 40,\n        \"total\": 44,\n        \"amountPaid\": 0,\n        \"payments\": [],\n        \"pdfUrl\": \"https://service.formitize.com/s/xxxx-xxxx-xxxx-xxxx\",\n        \"attachedTo\": {\n            \"job\": [\n                20000,\n                30000,\n                31353\n            ],\n            \"quote\": [\n                \"QU-001\",\n                \"QU-002\"\n            ]\n        },\n        \"history\": [\n            {\n                \"by\": \"User\",\n                \"userName\": \"Sam John\",\n                \"note\": \"Added 1 row.\",\n                \"date\": \"11th Aug 2022 11:26am\",\n                \"dateTimestamp\": \"1660181216\"\n            }\n        ]\n    }\n}",
           "type": "json"
         }
       ]
@@ -1657,7 +1657,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Response Body Example:",
-          "content": "{\n    \"payload\": {\n        \"id\": 226,\n        \"quoteNumber\": \"INVF-05932\",\n        \"quoteDate\": 1591192800,\n        \"quoteDateFormatted\": \"04th Jun 2020\",\n        \"clientID\": 103,\n        \"companyName\": \"My Contact\",\n        \"primaryAddress\": \"1234 Abc Street\",\n        \"primaryContactName\": \"Jeff\",\n        \"primaryContactPhone\": \"0410 000 000\",\n        \"primaryContactEmail\": \"test@email.com\",\n        \"client\": {\n            \"id\": 103,\n            \"billingName\": \"My Contact\"\n        },\n        \"contact\": {\n            \"name\": \"Quote Contact\",\n            \"email\": \"other@test.com\",\n            \"mobile\": \"0420 000 000\"\n        },\n        \"orderNumber\": \"\",\n        \"reference\": \"\",\n        \"addressTo\": \"\",\n        \"currency\": \"AUD\",\n        \"status\": \"Open\",\n        \"type\": \"ACCREC\",\n        \"lineItems\": [\n            {\n                \"id\": \"274\",\n                \"code\": \"\",\n                \"description\": \"3333\",\n                \"quantity\": \"1\",\n                \"unitAmount\": \"44\",\n                \"discountPercentage\": \"0\",\n                \"lineSubtotal\": 40,\n                \"taxAmount\": 4,\n                \"lineTotal\": 44\n            }\n        ],\n        \"taxType\": \"INCLUSIVE\",\n        \"tax\": 4,\n        \"subtotal\": 40,\n        \"total\": 44,\n        \"amountPaid\": 0,\n        \"attachedTo\": {\n            \"job\": [\n                20000,\n                30000,\n                31353\n            ],\n            \"quote\": [\n                \"QU-001\",\n                \"QU-002\"\n            ]\n        },\n        \"history\": [\n            {\n                \"by\": \"User\",\n                \"userName\": \"Sam John\",\n                \"note\": \"Added 1 row.\",\n                \"date\": \"11th Aug 2022 11:26am\",\n                \"dateTimestamp\": \"1660181216\"\n            }\n        ]\n    }\n}",
+          "content": "{\n    \"payload\": {\n        \"id\": 226,\n        \"quoteNumber\": \"INVF-05932\",\n        \"quoteDate\": 1591192800,\n        \"quoteDateFormatted\": \"04th Jun 2020\",\n        \"clientID\": 103,\n        \"companyName\": \"My Contact\",\n        \"primaryAddress\": \"1234 Abc Street\",\n        \"primaryContactName\": \"Jeff\",\n        \"primaryContactPhone\": \"0410 000 000\",\n        \"primaryContactEmail\": \"test@email.com\",\n        \"client\": {\n            \"id\": 103,\n            \"billingName\": \"My Contact\"\n        },\n        \"contact\": {\n            \"name\": \"Quote Contact\",\n            \"email\": \"other@test.com\",\n            \"mobile\": \"0420 000 000\"\n        },\n        \"orderNumber\": \"\",\n        \"reference\": \"\",\n        \"addressTo\": \"\",\n        \"currency\": \"AUD\",\n        \"status\": \"Open\",\n        \"type\": \"ACCREC\",\n        \"lineItems\": [\n            {\n                \"id\": \"274\",\n                \"code\": \"\",\n                \"description\": \"3333\",\n                \"quantity\": \"1\",\n                \"unitAmount\": \"44\",\n                \"discountPercentage\": \"0\",\n                \"lineSubtotal\": 40,\n                \"taxAmount\": 4,\n                \"lineTotal\": 44\n            }\n        ],\n        \"taxType\": \"INCLUSIVE\",\n        \"tax\": 4,\n        \"subtotal\": 40,\n        \"total\": 44,\n        \"amountPaid\": 0,\n        \"pdfUrl\": \"https://service.formitize.com/s/xxxx-xxxx-xxxx-xxxx\",\n        \"attachedTo\": {\n            \"job\": [\n                20000,\n                30000,\n                31353\n            ],\n            \"quote\": [\n                \"QU-001\",\n                \"QU-002\"\n            ]\n        },\n        \"history\": [\n            {\n                \"by\": \"User\",\n                \"userName\": \"Sam John\",\n                \"note\": \"Added 1 row.\",\n                \"date\": \"11th Aug 2022 11:26am\",\n                \"dateTimestamp\": \"1660181216\"\n            }\n        ]\n    }\n}",
           "type": "json"
         }
       ]
@@ -1688,15 +1688,44 @@ define({ "api": [
             "group": "Optional",
             "type": "number",
             "optional": true,
+            "field": "limit",
+            "description": "<p>The number of rows returned. Default is 500.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "optional": true,
             "field": "clientID",
             "description": "<p>List invoices with the specified Client ID.</p>"
           },
           {
             "group": "Optional",
             "type": "string",
+            "allowedValues": [
+              "\"1\"",
+              "\"0,1\""
+            ],
+            "optional": true,
+            "field": "status",
+            "description": "<p>List invoices matching the specified status. 0 = Draft, 1 = Open, 3 = Cancelled.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"2\"",
+              "\"1,2\""
+            ],
+            "optional": true,
+            "field": "paymentstatus",
+            "description": "<p>List invoices matching the specified payment status. 1 = Unpaid, 2 = Paid, 3 = Overdue, 5 = Expired.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
             "optional": true,
             "field": "value",
-            "description": "<p>Search for invoices that contain the specified search value.</p>"
+            "description": "<p>Search for invoices that contain the specified search value. Fields included in search are quoteNumber, orderNumber, addressTo, reference, invoiceNumber, leadId, title, companyName, primaryContactName, primaryContactEmail</p>"
           },
           {
             "group": "Optional",
@@ -1719,6 +1748,28 @@ define({ "api": [
             "optional": true,
             "field": "datecreated-to",
             "description": "<p>List invoices created on or after the given date.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"YYYY-MM-DD\"",
+              "\"Unix_timestamp\""
+            ],
+            "optional": true,
+            "field": "invoicedate-from",
+            "description": "<p>List invoices with invoice date on or after the given date.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"YYYY-MM-DD\"",
+              "\"Unix_timestamp\""
+            ],
+            "optional": true,
+            "field": "invoicedate-to",
+            "description": "<p>List invoices with invoice date on or after the given date.</p>"
           }
         ]
       }
@@ -1765,6 +1816,13 @@ define({ "api": [
             "group": "Optional",
             "type": "number",
             "optional": true,
+            "field": "limit",
+            "description": "<p>The number of rows returned. Default is 500.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "optional": true,
             "field": "clientID",
             "description": "<p>List quotes with the specified Client ID.</p>"
           },
@@ -1774,6 +1832,17 @@ define({ "api": [
             "optional": true,
             "field": "value",
             "description": "<p>Search for quotes that contain the specified search value.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"1\"",
+              "\"1,2\""
+            ],
+            "optional": true,
+            "field": "status",
+            "description": "<p>List quotes matching the specified status. 1 = Open, 2 = Accepted, 3 = Lost, 4 = Closed.</p>"
           },
           {
             "group": "Optional",
@@ -1796,6 +1865,28 @@ define({ "api": [
             "optional": true,
             "field": "datecreated-to",
             "description": "<p>List quotes created on or after the given date.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"YYYY-MM-DD\"",
+              "\"Unix_timestamp\""
+            ],
+            "optional": true,
+            "field": "quotedate-from",
+            "description": "<p>List quotes with quote date on or after the given date.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"YYYY-MM-DD\"",
+              "\"Unix_timestamp\""
+            ],
+            "optional": true,
+            "field": "quotedate-to",
+            "description": "<p>List quotes with quote date on or after the given date.</p>"
           }
         ]
       }
@@ -1811,7 +1902,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Response Body Example:",
-          "content": " {\n    \"payload\": [\n        {\n            \"id\": \"485\",\n            \"addressTo\": \"5553 New Canterbury Road, Dulwich Hill New South Wales 2203, Australia\",\n            \"clientID\": \"103\",\n            \"total\": \"0\",\n            \"subtotal\": \"0\",\n            \"tax\": \"0\",\n            \"type\": \"0\",\n            \"amountPaid\": \"0\",\n            \"quoteNumber\": \"INV-00115\",\n            \"orderNumber\": \"\",\n            \"reference\": \"\",\n            \"statusValue\": \"0\",\n            \"status\": \"Draft\",\n            \"currency\": \"AUD\",\n            \"taxTypeValue\": \"1\",\n            \"taxType\": \"INCLUSIVE\",\n            \"paid\": \"0\",\n            \"title\": \"\",\n            \"summary\": \"\",\n            \"terms\": \"\",\n            \"attachedTo\": [],\n            \"quoteDate\": \"1660831200\",\n            \"quoteDateFormatted\": \"19th Aug 2022\",\n            \"lastEmailed\": \"0\",\n            \"lastEmailedFormatted\": \"\",\n            \"companyname\": \"Made on Xero\",\n            \"primaryAddress\": \"11 Rodeo Rd, Gregory Hills NSW 2557\",\n            \"primaryContact\": \"103\",\n            \"primaryContactName\": \"Support\",\n            \"primaryContactPhone\": \"1300 552 008\",\n            \"primaryContactEmail\": \"support@formitize.com\"\n        },\n        {\n            \"id\": \"483\",\n            \"addressTo\": \"\",\n            \"clientID\": \"80\",\n            \"total\": \"5\",\n            \"subtotal\": \"5\",\n            \"tax\": \"0\",\n            \"type\": \"0\",\n            \"amountPaid\": \"0\",\n            \"quoteNumber\": \"INV-0343\",\n            \"orderNumber\": \"\",\n            \"reference\": \"\",\n            \"statusValue\": \"1\",\n            \"status\": \"Open\",\n            \"currency\": \"AUD\",\n            \"taxTypeValue\": \"2\",\n            \"taxType\": \"EXCLUSIVE\",\n            \"paid\": \"0\",\n            \"title\": \"\",\n            \"summary\": \"\",\n            \"terms\": \"\",\n            \"attachedTo\": [],\n            \"quoteDate\": \"1660053600\",\n            \"quoteDateFormatted\": \"10th Aug 2022\",\n            \"lastEmailed\": \"0\",\n            \"lastEmailedFormatted\": \"\",\n            \"companyname\": \"Test\",\n            \"primaryAddress\": \"George Street, Sydney, NSW 2000\",\n            \"primaryContact\": \"80\",\n            \"primaryContactName\": \"Support\",\n            \"primaryContactPhone\": \"1300 552 008\",\n            \"primaryContactEmail\": \"support@formitize.com\"\n        }\n    ]\n}",
+          "content": " {\n    \"payload\": [\n        {\n            \"id\": \"485\",\n            \"addressTo\": \"5553 New Canterbury Road, Dulwich Hill New South Wales 2203, Australia\",\n            \"clientID\": \"103\",\n            \"total\": \"0\",\n            \"subtotal\": \"0\",\n            \"tax\": \"0\",\n            \"type\": \"0\",\n            \"amountPaid\": \"0\",\n            \"quoteNumber\": \"QU-00115\",\n            \"orderNumber\": \"\",\n            \"reference\": \"\",\n            \"statusValue\": \"0\",\n            \"status\": \"Draft\",\n            \"currency\": \"AUD\",\n            \"taxTypeValue\": \"1\",\n            \"taxType\": \"INCLUSIVE\",\n            \"paid\": \"0\",\n            \"title\": \"\",\n            \"summary\": \"\",\n            \"terms\": \"\",\n            \"attachedTo\": [],\n            \"quoteDate\": \"1660831200\",\n            \"quoteDateFormatted\": \"19th Aug 2022\",\n            \"lastEmailed\": \"0\",\n            \"lastEmailedFormatted\": \"\",\n            \"companyname\": \"Made on Xero\",\n            \"primaryAddress\": \"11 Rodeo Rd, Gregory Hills NSW 2557\",\n            \"primaryContact\": \"103\",\n            \"primaryContactName\": \"Support\",\n            \"primaryContactPhone\": \"1300 552 008\",\n            \"primaryContactEmail\": \"support@formitize.com\"\n        },\n        {\n            \"id\": \"483\",\n            \"addressTo\": \"\",\n            \"clientID\": \"80\",\n            \"total\": \"5\",\n            \"subtotal\": \"5\",\n            \"tax\": \"0\",\n            \"type\": \"0\",\n            \"amountPaid\": \"0\",\n            \"quoteNumber\": \"INV-0343\",\n            \"orderNumber\": \"\",\n            \"reference\": \"\",\n            \"statusValue\": \"1\",\n            \"status\": \"Open\",\n            \"currency\": \"AUD\",\n            \"taxTypeValue\": \"2\",\n            \"taxType\": \"EXCLUSIVE\",\n            \"paid\": \"0\",\n            \"title\": \"\",\n            \"summary\": \"\",\n            \"terms\": \"\",\n            \"attachedTo\": [],\n            \"quoteDate\": \"1660053600\",\n            \"quoteDateFormatted\": \"10th Aug 2022\",\n            \"lastEmailed\": \"0\",\n            \"lastEmailedFormatted\": \"\",\n            \"companyname\": \"Test\",\n            \"primaryAddress\": \"George Street, Sydney, NSW 2000\",\n            \"primaryContact\": \"80\",\n            \"primaryContactName\": \"Support\",\n            \"primaryContactPhone\": \"1300 552 008\",\n            \"primaryContactEmail\": \"support@formitize.com\"\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -2078,6 +2169,34 @@ define({ "api": [
     "groupTitle": "CRM_Location"
   },
   {
+    "type": "delete",
+    "url": "/database/:tablename/all",
+    "title": "Delete Data From A Table",
+    "name": "DatabaseDelete",
+    "order": "3",
+    "description": "<p>Deletes the table.</p>",
+    "group": "Database",
+    "version": "1.0.0",
+    "examples": [
+      {
+        "title": "CURL Example",
+        "content": "curl -A YourCompany -u admin:password -X \"DELETE\" https://service.formitize.com/api/rest/v2/database/example_table/all",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Response Body Example:",
+          "content": "{\n\"payload\": {\n\"result\": \"success\",\n\"note\": \"Database records deleted.\"\n}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/system/class/api/rest/v1/database/_apidoc.js",
+    "groupTitle": "Database"
+  },
+  {
     "type": "get",
     "url": "/database/list",
     "title": "List Lookup Databases",
@@ -2157,6 +2276,34 @@ define({ "api": [
           "title": "Request Body Example Response:",
           "content": "{\n\t\"payload\": {\n\t\t\"result\": \"success\",\n\t\t\"note\": \"Import service spawned.\",\n\t\t\"serviceID\": \"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\"\n\t}\n}",
           "type": "JSON"
+        }
+      ]
+    },
+    "filename": "app/system/class/api/rest/v1/database/_apidoc.js",
+    "groupTitle": "Database"
+  },
+  {
+    "type": "delete",
+    "url": "/database/:tablename/truncate",
+    "title": "Truncate Data From A Table",
+    "name": "DatabaseTruncate",
+    "order": "4",
+    "description": "<p>Permanently remove all records from a specified table. Unlike the delete endpoint, this physically removes all rows. Useful for wiping a table before re-importing fresh data.</p>",
+    "group": "Database",
+    "version": "1.0.0",
+    "examples": [
+      {
+        "title": "CURL Example",
+        "content": "curl -A YourCompany -u admin:password -X \"DELETE\" https://service.formitize.com/api/rest/v2/database/example_table/truncate",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Response Body Example:",
+          "content": "{\n\"payload\": {\n\"result\": \"success\",\n\"note\": \"Database records truncated.\"\n}\n}",
+          "type": "json"
         }
       ]
     },
@@ -2390,6 +2537,20 @@ define({ "api": [
             "optional": true,
             "field": "page",
             "description": "<p>The page number, starting from 1.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "optional": true,
+            "field": "limit",
+            "description": "<p>The number of rows returned. Default is 500.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "optional": true,
+            "field": "value",
+            "description": "<p>Search for invoices that contain the specified search value. Fields included in search are billingName, contactName, deliveryContact, deliveryLocation, description, invoiceNumber, jobNumber, location, orderNumber, pickupSiteName, siteName, title</p>"
           },
           {
             "group": "Optional",
