@@ -3575,7 +3575,7 @@
       "examples": [
         {
           "title": "Response Body Example:",
-          "content": "{\n    \"payload\": {\n        \"id\": 123,\n        \"title\": \"Follow up with client\",\n        \"description\": \"Call regarding quote\",\n        \"taskType\": \"Call\",\n        \"status\": 0,\n        \"dueDate\": 1713168000,\n        \"assignedTo\": 45,\n        \"createdBy\": 12,\n        \"dateCreated\": 1712563200,\n        \"dateModified\": 1712563200,\n        \"relatedTo\": {\n            \"contact\": {\n                \"77\": {\n                    \"id\": \"77\",\n                    \"title\": \"Business Name\"\n                }\n            },\n            \"job\": {},\n            \"person\": {},\n            \"form\": {}\n        },\n        \"tags\": [\"urgent\", \"sales\"],\n        \"workflow\": [\n            {\"name\": \"Step 1\", \"done\": true},\n            {\"name\": \"Step 2\", \"done\": false}\n        ],\n        \"workflowID\": 5,\n        \"externalSource\": 0,\n        \"externalSourceID\": \"\",\n        \"attachments\": []\n    }\n}",
+          "content": "{\n    \"payload\": {\n        \"id\": 123,\n        \"title\": \"Follow up with client\",\n        \"description\": \"Call regarding quote\",\n        \"taskType\": \"Call\",\n        \"status\": 0,\n        \"dueDate\": 1713168000,\n        \"assignedTo\": 45,\n        \"createdBy\": 12,\n        \"dateCreated\": 1712563200,\n        \"dateModified\": 1712563200,\n        \"relatedTo\": {\n            \"contact\": {\n                \"77\": {\n                    \"id\": \"77\",\n                    \"title\": \"Business Name\"\n                }\n            },\n            \"job\": {},\n            \"person\": {},\n            \"form\": {}\n        },\n        \"tags\": [\"urgent\", \"sales\"],\n        \"workflow\": [\n            {\"name\": \"Step 1\", \"done\": true},\n            {\"name\": \"Step 2\", \"done\": false}\n        ],\n        \"workflowID\": 5,\n        \"attachments\": []\n    }\n}",
           "type": "json"
         }
       ]
@@ -3655,20 +3655,6 @@
             "optional": true,
             "field": "search",
             "description": "<p>Search task title and description.</p>"
-          },
-          {
-            "group": "Optional",
-            "type": "number",
-            "optional": true,
-            "field": "externalSource",
-            "description": "<p>Filter by external source type.</p>"
-          },
-          {
-            "group": "Optional",
-            "type": "string",
-            "optional": true,
-            "field": "externalSourceID",
-            "description": "<p>Filter by external source ID.</p>"
           },
           {
             "group": "Optional",
@@ -3821,20 +3807,6 @@
             "optional": true,
             "field": "attachments",
             "description": "<p>Array of resource IDs to attach.</p>"
-          },
-          {
-            "group": "Body",
-            "type": "number",
-            "optional": true,
-            "field": "externalSource",
-            "description": "<p>External source type identifier.</p>"
-          },
-          {
-            "group": "Body",
-            "type": "string",
-            "optional": true,
-            "field": "externalSourceID",
-            "description": "<p>External source record ID.</p>"
           }
         ],
         "Workflow": [
@@ -3978,20 +3950,6 @@
             "optional": true,
             "field": "attachments",
             "description": "<p>Array of resource IDs.</p>"
-          },
-          {
-            "group": "Body",
-            "type": "number",
-            "optional": true,
-            "field": "externalSource",
-            "description": "<p>External source type identifier.</p>"
-          },
-          {
-            "group": "Body",
-            "type": "string",
-            "optional": true,
-            "field": "externalSourceID",
-            "description": "<p>External source record ID.</p>"
           }
         ],
         "Workflow": [
