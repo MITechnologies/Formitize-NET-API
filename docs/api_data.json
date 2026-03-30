@@ -3526,5 +3526,535 @@
     },
     "filename": "app/system/class/api/rest/v1/form/_apidoc.submit.js",
     "groupTitle": "Submitted_Forms"
+  },
+  {
+    "type": "delete",
+    "url": "/crm/task/:id",
+    "title": "Delete Task",
+    "name": "DeleteTask",
+    "order": "5",
+    "group": "Task",
+    "version": "1.0.0",
+    "description": "<p>Soft delete a task by ID. The task is marked as deleted but not permanently removed.</p>",
+    "examples": [
+      {
+        "title": "CURL Example",
+        "content": "curl -H \"Authorization: Bearer TOKEN\" -X \"DELETE\" https://service.formitize.com/api/rest/v2/crm/task/123",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Response Body Example:",
+          "content": "{\n    \"payload\": {\n        \"id\": 123,\n        \"message\": \"Task deleted successfully.\"\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/system/class/api/rest/v1/crm/task/_apidoc.js",
+    "groupTitle": "Task"
+  },
+  {
+    "type": "get",
+    "url": "/crm/task/:id",
+    "title": "Get Task",
+    "name": "GetTask",
+    "order": "2",
+    "group": "Task",
+    "version": "1.0.0",
+    "description": "<p>Get a single task by ID, including enriched relatedTo data and attachments.</p>",
+    "examples": [
+      {
+        "title": "CURL Example",
+        "content": "curl -H \"Authorization: Bearer TOKEN\" https://service.formitize.com/api/rest/v2/crm/task/123",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Response Body Example:",
+          "content": "{\n    \"payload\": {\n        \"id\": 123,\n        \"title\": \"Follow up with client\",\n        \"description\": \"Call regarding quote\",\n        \"taskType\": \"Call\",\n        \"status\": 0,\n        \"dueDate\": 1713168000,\n        \"assignedTo\": 45,\n        \"createdBy\": 12,\n        \"dateCreated\": 1712563200,\n        \"dateModified\": 1712563200,\n        \"relatedTo\": {\n            \"contact\": {\n                \"77\": {\n                    \"id\": \"77\",\n                    \"title\": \"Business Name\"\n                }\n            },\n            \"job\": {},\n            \"person\": {},\n            \"form\": {}\n        },\n        \"tags\": [\"urgent\", \"sales\"],\n        \"workflow\": [\n            {\"name\": \"Step 1\", \"done\": true},\n            {\"name\": \"Step 2\", \"done\": false}\n        ],\n        \"workflowID\": 5,\n        \"externalSource\": 0,\n        \"externalSourceID\": \"\",\n        \"attachments\": []\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/system/class/api/rest/v1/crm/task/_apidoc.js",
+    "groupTitle": "Task"
+  },
+  {
+    "type": "get",
+    "url": "/crm/task/",
+    "title": "List Tasks",
+    "name": "ListTask",
+    "order": "1",
+    "group": "Task",
+    "version": "1.0.0",
+    "description": "<p>Get a paginated list of tasks with optional filters.</p>",
+    "parameter": {
+      "fields": {
+        "Optional": [
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"open\"",
+              "\"closed\""
+            ],
+            "optional": true,
+            "field": "status",
+            "description": "<p>Filter by task status.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "optional": true,
+            "field": "assignedTo",
+            "description": "<p>Filter by assigned user ID.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "optional": true,
+            "field": "clientID",
+            "description": "<p>Filter by related contact (client) ID.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "optional": true,
+            "field": "taskType",
+            "description": "<p>Filter by task type.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"Unix_timestamp\"",
+              "\"YYYY-MM-DD\""
+            ],
+            "optional": true,
+            "field": "from",
+            "description": "<p>Filter tasks with a due date on or after this date.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"Unix_timestamp\"",
+              "\"YYYY-MM-DD\""
+            ],
+            "optional": true,
+            "field": "to",
+            "description": "<p>Filter tasks with a due date on or before this date.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "optional": true,
+            "field": "search",
+            "description": "<p>Search task title and description.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "optional": true,
+            "field": "externalSource",
+            "description": "<p>Filter by external source type.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "optional": true,
+            "field": "externalSourceID",
+            "description": "<p>Filter by external source ID.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "optional": true,
+            "field": "page",
+            "defaultValue": "1",
+            "description": "<p>Page number, starting from 1.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "number",
+            "size": "1-500",
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "50",
+            "description": "<p>Number of results per page.</p>"
+          },
+          {
+            "group": "Optional",
+            "type": "string",
+            "allowedValues": [
+              "\"asc\"",
+              "\"desc\""
+            ],
+            "optional": true,
+            "field": "order",
+            "defaultValue": "desc",
+            "description": "<p>Sort direction on due date.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "CURL Example",
+        "content": "curl -H \"Authorization: Bearer TOKEN\" https://service.formitize.com/api/rest/v2/crm/task/?status=open&page=1&limit=10",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Response Body Example:",
+          "content": "{\n    \"payload\": [\n        {\n            \"id\": 123,\n            \"title\": \"Follow up with client\",\n            \"description\": \"Call regarding quote\",\n            \"taskType\": \"Call\",\n            \"status\": 0,\n            \"dueDate\": 1713168000,\n            \"assignedTo\": 45,\n            \"createdBy\": 12,\n            \"dateCreated\": 1712563200,\n            \"dateModified\": 1712563200,\n            \"tags\": [\"urgent\", \"sales\"]\n        }\n    ],\n    \"total\": 1,\n    \"page\": 1,\n    \"limit\": 10\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/system/class/api/rest/v1/crm/task/_apidoc.js",
+    "groupTitle": "Task"
+  },
+  {
+    "type": "post",
+    "url": "/crm/task/",
+    "title": "Create Task",
+    "name": "PostCreateTask",
+    "order": "3",
+    "group": "Task",
+    "version": "1.0.0",
+    "description": "<p>Create a new task.</p>",
+    "parameter": {
+      "fields": {
+        "Body": [
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": false,
+            "field": "title",
+            "description": "<p>The task title (required).</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": true,
+            "field": "description",
+            "description": "<p>Task description.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": true,
+            "field": "taskType",
+            "description": "<p>Task type label (e.g. &quot;Call&quot;, &quot;Email&quot;, &quot;Meeting&quot;).</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "optional": true,
+            "field": "dueDate",
+            "description": "<p>Due date as unix timestamp or date string.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "optional": true,
+            "field": "assignedTo",
+            "description": "<p>User ID to assign the task to.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "status",
+            "defaultValue": "0",
+            "description": "<p>Task status. 0 = open, 1 = closed.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "object",
+            "optional": true,
+            "field": "relatedTo",
+            "description": "<p>Related entities object.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "object",
+            "optional": true,
+            "field": "relatedTo.contact",
+            "description": "<p>Related contacts keyed by client ID.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "object",
+            "optional": true,
+            "field": "relatedTo.job",
+            "description": "<p>Related jobs keyed by job ID.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "object",
+            "optional": true,
+            "field": "relatedTo.person",
+            "description": "<p>Related persons keyed by contact ID.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string[]",
+            "optional": true,
+            "field": "tags",
+            "description": "<p>Array of tag strings.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number[]",
+            "optional": true,
+            "field": "attachments",
+            "description": "<p>Array of resource IDs to attach.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "optional": true,
+            "field": "externalSource",
+            "description": "<p>External source type identifier.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": true,
+            "field": "externalSourceID",
+            "description": "<p>External source record ID.</p>"
+          }
+        ],
+        "Workflow": [
+          {
+            "group": "Workflow",
+            "type": "string",
+            "allowedValues": [
+              "\"template\"",
+              "\"<id>\""
+            ],
+            "optional": true,
+            "field": "workflowID",
+            "description": "<p>Workflow template handling. Set to <code>&quot;template&quot;</code> to create a new workflow template. Set to an existing template ID to assign it. Set to <code>0</code> or omit for no workflow.</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "string",
+            "optional": true,
+            "field": "workflowName",
+            "description": "<p>Name for the new template (required when workflowID is &quot;template&quot;).</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "object[]",
+            "optional": true,
+            "field": "workflow",
+            "description": "<p>Array of workflow steps.</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "string",
+            "optional": false,
+            "field": "workflow.name",
+            "description": "<p>The step name/label.</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "boolean",
+            "optional": true,
+            "field": "workflow.done",
+            "defaultValue": "false",
+            "description": "<p>Whether this step is completed.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request Body Example:",
+          "content": "{\n    \"title\": \"Follow up with client\",\n    \"description\": \"Call regarding the quote we sent last week\",\n    \"taskType\": \"Call\",\n    \"dueDate\": 1713168000,\n    \"assignedTo\": 45,\n    \"relatedTo\": {\n        \"contact\": {\n            \"77\": {\"id\": \"77\"}\n        }\n    },\n    \"tags\": [\"urgent\", \"sales\"],\n    \"workflow\": [\n        {\"name\": \"Make call\", \"done\": false},\n        {\"name\": \"Send email summary\", \"done\": false},\n        {\"name\": \"Update CRM\", \"done\": false}\n    ],\n    \"workflowID\": \"template\",\n    \"workflowName\": \"Client Follow Up\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Response Body Example:",
+          "content": "{\n    \"payload\": {\n        \"id\": 124,\n        \"title\": \"Follow up with client\",\n        \"status\": 0,\n        \"dateModified\": 1712563200,\n        \"workflowID\": 8\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/system/class/api/rest/v1/crm/task/_apidoc.js",
+    "groupTitle": "Task"
+  },
+  {
+    "type": "post",
+    "url": "/crm/task/:id",
+    "title": "Update Task",
+    "name": "PostEditTask",
+    "order": "4",
+    "group": "Task",
+    "version": "1.0.0",
+    "description": "<p>Update an existing task. Only fields provided in the body will be updated.</p>",
+    "parameter": {
+      "fields": {
+        "Body": [
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": true,
+            "field": "title",
+            "description": "<p>The task title.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": true,
+            "field": "description",
+            "description": "<p>Task description.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": true,
+            "field": "taskType",
+            "description": "<p>Task type label.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "optional": true,
+            "field": "dueDate",
+            "description": "<p>Due date as unix timestamp or date string.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "optional": true,
+            "field": "assignedTo",
+            "description": "<p>User ID to assign the task to.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "status",
+            "description": "<p>Task status. 0 = open, 1 = closed. Changing status creates CRM history entries.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "object",
+            "optional": true,
+            "field": "relatedTo",
+            "description": "<p>Related entities object.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string[]",
+            "optional": true,
+            "field": "tags",
+            "description": "<p>Array of tag strings.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number[]",
+            "optional": true,
+            "field": "attachments",
+            "description": "<p>Array of resource IDs.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "number",
+            "optional": true,
+            "field": "externalSource",
+            "description": "<p>External source type identifier.</p>"
+          },
+          {
+            "group": "Body",
+            "type": "string",
+            "optional": true,
+            "field": "externalSourceID",
+            "description": "<p>External source record ID.</p>"
+          }
+        ],
+        "Workflow": [
+          {
+            "group": "Workflow",
+            "type": "string",
+            "allowedValues": [
+              "\"template\"",
+              "\"<id>\""
+            ],
+            "optional": true,
+            "field": "workflowID",
+            "description": "<p>Workflow template handling.</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "string",
+            "optional": true,
+            "field": "workflowName",
+            "description": "<p>Name for the new template (when workflowID is &quot;template&quot;).</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "object[]",
+            "optional": true,
+            "field": "workflow",
+            "description": "<p>Array of workflow steps.</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "string",
+            "optional": false,
+            "field": "workflow.name",
+            "description": "<p>The step name/label.</p>"
+          },
+          {
+            "group": "Workflow",
+            "type": "boolean",
+            "optional": true,
+            "field": "workflow.done",
+            "defaultValue": "false",
+            "description": "<p>Whether this step is completed.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request Body Example - Close task and mark workflow step done:",
+          "content": "{\n    \"status\": 1,\n    \"workflow\": [\n        {\"name\": \"Make call\", \"done\": true},\n        {\"name\": \"Send email summary\", \"done\": true},\n        {\"name\": \"Update CRM\", \"done\": true}\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Response Body Example:",
+          "content": "{\n    \"payload\": {\n        \"id\": 123,\n        \"title\": \"Follow up with client\",\n        \"status\": 1,\n        \"dateModified\": 1712649600,\n        \"workflowID\": 5\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/system/class/api/rest/v1/crm/task/_apidoc.js",
+    "groupTitle": "Task"
   }
 ]
