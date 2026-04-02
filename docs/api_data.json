@@ -193,7 +193,7 @@
             "type": "string",
             "optional": true,
             "field": "client.contact.email",
-            "description": "<p>First name of contact.</p>"
+            "description": "<p>Email address of contact.</p>"
           },
           {
             "group": "Client Fields",
@@ -596,7 +596,7 @@
             "type": "string",
             "optional": true,
             "field": "client.contact.email",
-            "description": "<p>First name of contact.</p>"
+            "description": "<p>Email address of contact.</p>"
           },
           {
             "group": "Client Fields",
@@ -837,7 +837,7 @@
             "type": "string",
             "optional": true,
             "field": "email",
-            "description": "<p>First name of contact.</p>"
+            "description": "<p>Email address of contact.</p>"
           },
           {
             "group": "Contact Fields",
@@ -1283,7 +1283,7 @@
             "type": "string",
             "optional": true,
             "field": "contact.email",
-            "description": "<p>First name of contact.</p>"
+            "description": "<p>Email address of contact.</p>"
           },
           {
             "group": "Client Fields",
@@ -1477,7 +1477,7 @@
             "type": "string",
             "optional": true,
             "field": "contact.email",
-            "description": "<p>First name of contact.</p>"
+            "description": "<p>Email address of contact.</p>"
           },
           {
             "group": "Client Fields",
@@ -2822,7 +2822,7 @@
             "type": "string",
             "optional": true,
             "field": "client.contact.email",
-            "description": "<p>First name of contact.</p>"
+            "description": "<p>Email address of contact.</p>"
           },
           {
             "group": "Client Fields",
@@ -3192,7 +3192,7 @@
             "type": "string",
             "optional": true,
             "field": "client.contact.email",
-            "description": "<p>First name of contact.</p>"
+            "description": "<p>Email address of contact.</p>"
           },
           {
             "group": "Client Fields",
